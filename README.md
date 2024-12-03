@@ -1,9 +1,9 @@
 
 **CONTRIBUTORS:**
-NAMBIAR KRISHNENDU RADHAKRISHNAN
-ASHWIN SREERAG
-GAADHA VS
-ANARGHA RANGIT
+NAMBIAR KRISHNENDU RADHAKRISHNAN<br />
+ASHWIN SREERAG<br />
+GAADHA VS<br />
+ANARGHA RANGIT<br />
 
 # Todo Application
 Todo App is a simple web application developed using Java Spring Boot for the backend and Angular for the frontend. 
