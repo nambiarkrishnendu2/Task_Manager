@@ -1,3 +1,10 @@
+
+**CONTRIBUTORS:**
+NAMBIAR KRISHNENDU RADHAKRISHNAN
+ASHWIN SREERAG
+GAADHA VS
+ANARGHA RANGIT
+
 # Todo Application
 Todo App is a simple web application developed using Java Spring Boot for the backend and Angular for the frontend. 
 Credits to Ranga Karanam for his [Udemy Course](https://www.udemy.com/course/full-stack-application-development-with-spring-boot-and-angular/) which has guided me through this learning process.
