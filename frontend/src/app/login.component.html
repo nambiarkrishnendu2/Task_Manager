@@ -1,0 +1,33 @@
+<div class="login-container">
+  <div class="chess-image">
+    <img src="https://i0.wp.com/getflowdotcom.wpcomstaging.com/wp-content/uploads/2020/05/task-management-tips.jpg?fit=1255%2C835&ssl=1" alt="Chess King">
+  </div>
+  <div class="login-form">
+    <div class="form-content">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" [(ngModel)]="email" name="email" placeholder="Value">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" [(ngModel)]="password" name="password" placeholder="Value">
+      </div>
+      <button (click)="onSignIn()" class="sign-in-btn">Sign In</button>
+      <a href="./forgotpass" class="forgot-password" (click)="onForgotPassword()">Forgot password?</a>
+      
+      <button class="google-btn" (click)="onGoogleSignIn()">
+        <img src="https://th.bing.com/th/id/OIP.xYm-VIDJ4RDBprBbydEDZAHaHa?w=512&h=512&rs=1&pid=ImgDetMain" alt="Google"> Sign In with Google account
+      </button>
+      <button class="apple-btn" (click)="onAppleSignIn()">
+        <img src="https://th.bing.com/th/id/R.12bf9978cf11a8bd4c8f9ce25ec09cb8?rik=qY7OUSitPIoicg&riu=http%3a%2f%2fclipart-library.com%2fimages_k%2fapple-logo-transparent-background%2fapple-logo-transparent-background-23.png&ehk=6uHLXXlNMGpJr%2f1d3WV%2biDeXM0B6PvmKEiJI0JBQhgw%3d&risl=&pid=ImgRaw&r=0" alt="Apple"> Sign In with Apple account
+      </button>
+      <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+      </div>
+      <div class="signup-link">
+        <span>New here? </span>
+        <button class="signup-btn" (click)="onSignUp()">Sign Up</button>
+      </div>
+    </div>
+  </div>
+</div>

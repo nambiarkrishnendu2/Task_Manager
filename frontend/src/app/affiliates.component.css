@@ -1,0 +1,88 @@
+.affiliates-container {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  color: rgb(0, 0, 0);
+}
+
+.search-bar {
+  display: flex;
+  margin-bottom: 20px;
+}
+:host {
+  display: block;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('https://th.bing.com/th/id/OIP.YVtbeX44cF8-b_Pa9m2iZQHaHa?w=900&h=900&rs=1&pid=ImgDetMain'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.9;
+}
+.search-bar input {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+}
+
+.clear-btn {
+  padding: 10px 15px;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.affiliate-card {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background: rgba(175, 154, 101, 0.678);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  color: rgb(24, 23, 23);
+  opacity: 1;
+}
+
+.avatar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.info {
+  flex-grow: 1;
+  margin-left: 20px;
+  color: black;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+}
+
+.website-btn, .contact-btn {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.website-btn {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.contact-btn {
+  background: #03030352;
+  color: white;
+}

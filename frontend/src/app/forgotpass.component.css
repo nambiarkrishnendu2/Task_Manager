@@ -1,0 +1,124 @@
+body {
+  margin: 0; 
+  padding: 0; 
+  overflow-x: hidden;
+}
+ 
+.forgot-password-container {
+  width: 300px;
+  margin: 50px auto 0; 
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+  position: relative; }
+ 
+.forgot-password-container:hover {
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+ 
+h2 {
+  text-align: center;
+  color: #000000;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+ 
+.form-group {
+  margin-bottom: 30px;
+}
+ 
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+  font-size: 14px;
+}
+ 
+input {
+  width: 90%;
+  padding: 12px;
+  border: 1px solid #007bff;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #f1f1f1;
+  transition: border 0.3s ease, background-color 0.3s ease;
+}
+ 
+input:focus {
+  border-color: #0056b3;
+  background-color: #ffffff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+ 
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+ 
+button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+}
+ 
+button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+ 
+.error {
+  color: #ff0000;
+  font-size: 12px;
+  margin-top: 5px;
+  text-align: center;
+}
+ 
+.success {
+  color: #28a745;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+ 
+.background-image {
+  background-image: url('https://wallpapercave.com/wp/wp2883566.jpg');
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; 
+  height: 100vh;
+  width: 100%; 
+  position: fixed;
+  top: 0; 
+  left: 0; 
+  z-index: -1; 
+}
+ 
+@media (max-width: 500px) {
+  .forgot-password-container {
+    width: 100%;
+    padding: 20px;
+    margin-top: 50px; 
+  }
+ 
+  h2 {
+    font-size: 20px;
+  }
+ 
+  button {
+    font-size: 14px;
+  }
+}

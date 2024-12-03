@@ -1,0 +1,25 @@
+<div class="affiliates-container">
+  <h1>Affiliates</h1>
+  
+  <div class="search-bar">
+    <input [(ngModel)]="searchTerm" placeholder="Search...">
+    <button (click)="clearSearch()" class="clear-btn">×</button>
+  </div>
+
+  <div class="affiliate-list">
+    <div *ngFor="let affiliate of affiliates" class="affiliate-card">
+      <div class="avatar">
+        <img src="https://th.bing.com/th/id/OIP.E_CLbo4l4rLi2eoHYiVxtAHaHv?rs=1&pid=ImgDetMain" [alt]="affiliate.name">
+      </div>
+      <div class="info">
+        <h2>{{affiliate.name}}</h2>
+        <p class="description">{{affiliate.description}}</p>
+        <p class="achievements">{{affiliate.achievements}}</p>
+      </div>
+      <div class="actions">
+        <button (click)="openWebsite(affiliate)" class="website-btn">Website</button>
+        <button (click)="contact(affiliate)" class="contact-btn">Contact</button>
+      </div>
+    </div>
+  </div>
+</div>

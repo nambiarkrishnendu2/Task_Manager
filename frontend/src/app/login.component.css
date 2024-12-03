@@ -1,0 +1,113 @@
+
+:host {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+.login-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.chess-image {
+  flex: 1;
+  background-color: #f0f0f0;
+}
+
+.chess-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.login-form {
+  flex: 1;
+  padding: 2rem;
+  background-color: #faf0ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-content {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.sign-in-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.forgot-password {
+  display: block;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.google-btn, .apple-btn {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.google-btn {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.apple-btn {
+  background-color: #000;
+  color: #fff;
+}
+
+.google-btn img, .apple-btn img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.signup-link {
+  text-align: center;
+}
+
+.signup-link a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}

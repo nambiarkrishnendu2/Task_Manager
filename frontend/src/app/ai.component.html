@@ -1,0 +1,33 @@
+<div class="chess-container">
+  <div class="chess-board">
+    <table>
+      <tr *ngFor="let row of board; let i = index">
+        <td 
+          *ngFor="let cell of row; let j = index"
+          (click)="movePiece(i, j)"
+          [ngClass]="{'white-square': (i + j) % 2 === 0, 'black-square': (i + j) % 2 !== 0}">
+          <span>{{ cell }}</span>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="sidebar">
+    <div class="player-info">
+      <img src="https://i.pinimg.com/originals/0d/91/fc/0d91fc167ad90f24c2afc93f23df5257.jpg" alt="Player Image" class="player-image" />
+      <h2>{{ player.name }}</h2>
+      <p class="rating">{{ player.rating }} <i class="fas fa-flag-usa"></i></p>
+      <p class="description">{{ player.description }}</p>
+    </div>
+
+    <div class="opponent-selection">
+      <h3>Play vs...</h3>
+      <div class="opponent" *ngFor="let opponent of opponents" (click)="selectOpponent(opponent)">
+        <img [src]="opponent.image" alt="Opponent Image" class="opponent-image" />
+        <p>{{ opponent.name }} ({{ opponent.rating }})</p>
+      </div>
+    </div>
+
+    <button class="choose-button" (click)="startGame()">Choose</button>
+  </div>
+</div>

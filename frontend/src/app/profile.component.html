@@ -1,0 +1,102 @@
+<div class="profile-container">
+  <div class="profile-header">
+    <img class="profile-picture" src="https://th.bing.com/th/id/OIP.MS0eCZuwua11NcIQ69LClQHaHa?rs=1&pid=ImgDetMain" alt="Profile Picture">
+    <div class="profile-details">
+      <h1 class="full-name">Full name</h1>
+      <p class="username">@username</p>
+      <p class="about">About me</p>
+    </div>
+    <div class="rank-buttons">
+      <button class="rank-button">National <span>{{ nationalRank }}</span></button>
+      <button class="rank-button">State <span>{{ stateRank }}</span></button>
+    </div>
+  </div>
+ 
+  <div class="profile-form">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <div *ngIf="!isEditMode">{{ email }}</div>
+      <input *ngIf="isEditMode" type="text" id="email" [(ngModel)]="email" placeholder="Value">
+    </div>
+    <div class="form-group">
+      <label for="mobile">Mobile No</label>
+      <div *ngIf="!isEditMode">{{ mobile }}</div>
+      <input *ngIf="isEditMode" type="text" id="mobile" [(ngModel)]="mobile" placeholder="Value">
+    </div>
+    <div class="form-group">
+      <label for="age">Age</label>
+      <div *ngIf="!isEditMode">{{ age }}</div>
+      <input *ngIf="isEditMode" type="range" id="age" min="0" max="110" [(ngModel)]="age" (input)="updateAgeValue()">
+      <div class="age-value" *ngIf="isEditMode">{{ age }}</div>
+    </div>
+    <div class="form-group">
+      <label for="gender">Gender</label>
+      <div *ngIf="!isEditMode">{{ gender }}</div>
+      <select *ngIf="isEditMode" id="gender" [(ngModel)]="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="home-state">Home State</label>
+      <div *ngIf="!isEditMode">{{ homeState }}</div>
+      <select *ngIf="isEditMode" id="home-state" [(ngModel)]="homeState">
+        <option value="">Select State</option>
+        <option value="Andhra Pradesh">Andhra Pradesh</option>
+        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+        <option value="Assam">Assam</option>
+        <option value="Bihar">Bihar</option>
+        <option value="Chhattisgarh">Chhattisgarh</option>
+        <option value="Goa">Goa</option>
+        <option value="Gujarat">Gujarat</option>
+        <option value="Haryana">Haryana</option>
+        <option value="Himachal Pradesh">Himachal Pradesh</option>
+        <option value="Jharkhand">Jharkhand</option>
+        <option value="Karnataka">Karnataka</option>
+        <option value="Kerala">Kerala</option>
+        <option value="Madhya Pradesh">Madhya Pradesh</option>
+        <option value="Maharashtra">Maharashtra</option>
+        <option value="Manipur">Manipur</option>
+        <option value="Meghalaya">Meghalaya</option>
+        <option value="Mizoram">Mizoram</option>
+        <option value="Nagaland">Nagaland</option>
+        <option value="Odisha">Odisha</option>
+        <option value="Punjab">Punjab</option>
+        <option value="Rajasthan">Rajasthan</option>
+        <option value="Sikkim">Sikkim</option>
+        <option value="Tamil Nadu">Tamil Nadu</option>
+        <option value="Telangana">Telangana</option>
+        <option value="Tripura">Tripura</option>
+        <option value="Uttarakhand">Uttarakhand</option>
+        <option value="Uttar Pradesh">Uttar Pradesh</option>
+        <option value="West Bengal">West Bengal</option>
+        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+        <option value="Chandigarh">Chandigarh</option>
+        <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+        <option value="Daman and Diu">Daman and Diu</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Lakshadweep">Lakshadweep</option>
+        <option value="Puducherry">Puducherry</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="skill-level">Skill Level</label>
+      <div *ngIf="!isEditMode">{{ skillLevel }}</div>
+      <select *ngIf="isEditMode" id="skill-level" [(ngModel)]="skillLevel">
+        <option value="beginner">Beginner</option>
+        <option value="intermediate">Intermediate</option>
+        <option value="advanced">Advanced</option>
+      </select>
+    </div>
+ 
+    <div class="buttons-container">
+      <button class="button" *ngIf="isEditMode" (click)="onSubmit()">Submit</button>
+      <button class="button" *ngIf="isEditMode" (click)="toggleEditMode()">Cancel</button>
+    </div>
+  </div>
+ 
+  <div class="buttons-container" *ngIf="!isEditMode">
+    <button class="button" (click)="toggleEditMode()">Edit</button>
+  </div>
+</div>

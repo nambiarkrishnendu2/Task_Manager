@@ -1,0 +1,98 @@
+<header>
+  <div class="logo-area">
+    <img
+      src="https://miro.medium.com/max/2400/1*rcYKyOQnJXgZEeW38sPf3Q.jpeg"
+      alt="Logo"
+    />
+    <div class="org-info">
+      <h1>Orion Innovation</h1>
+      <p>Affiliation details</p>
+      <p>org address</p>
+    </div>
+  </div>
+  <div class="profile-area">
+    <div class="profile-icon" (click)="toggleProfileMenu()">G</div>
+    <ul class="profile-dropdown" [class.show]="showProfileMenu">
+      <li><a routerLink="/profile" (click)="closeProfileMenu()">Edit Profile</a></li>
+      <li><a routerLink="/home" (click)="closeProfileMenu()">Logout</a></li>
+    </ul>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="./home">Home</a></li>
+    <li (mouseenter)="showTournaments = true" (mouseleave)="showTournaments = false">
+      <a>Tournaments</a>
+      <div class="dropdown-menu" [class.show]="showTournaments">
+        <a (click)="selectTournamentType('past')">Past</a>
+        <a (click)="selectTournamentType('upcoming')">Upcoming</a>
+      </div>
+    </li>
+    <li (mouseenter)="showRankings = true" (mouseleave)="showRankings = false">
+      <a>Rankings</a>
+      <div class="dropdown-menu" [class.show]="showRankings">
+        <a href="./state">State</a>
+        <a href="./national">National</a>
+      </div>
+    </li>
+    <li><a href="./affiliates">Affiliates</a></li>
+    <li><a href="./watchgames">Watch Games</a></li>
+    <li><a href="./playgames">Play Games</a></li>
+  </ul>
+</nav>
+
+<section *ngIf="selectedTournamentType" class="tournaments">
+  <h2>{{ selectedTournamentType === 'past' ? 'Past Tournaments' : 'Upcoming Tournaments' }}</h2>
+  <ul>
+    <li *ngFor="let tournament of getTournaments()">
+      <strong>{{ tournament.name }}</strong>
+      <p>{{ tournament.date }}</p>
+    </li>
+  </ul>
+</section>
+<main>
+  <section class="scrollable announcements">
+    <h2>Announcements</h2>
+    <ul>
+      <li *ngFor="let item of listItems">
+        <strong>{{ item.title }}</strong>
+        <p>{{ item.description }}</p>
+      </li>
+    </ul>
+  </section>
+ 
+  <section class="main-content">
+    <h2>Headlines</h2>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="news-card">
+            <div class="image-placeholder"></div>
+            <h3>News Heading</h3>
+            <p>2nd</p>
+          </div>
+        </div>
+        <!-- Add more carousel items as needed -->
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Prev</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </section>
+ 
+  <section class="scrollable achievements">
+    <h2>Achievements</h2>
+    <ul>
+      <li *ngFor="let item of listItems">
+        <strong>{{ item.title }}</strong>
+        <p>{{ item.description }}</p>
+      </li>
+    </ul>
+  </section>
+</main>
