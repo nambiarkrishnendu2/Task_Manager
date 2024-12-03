@@ -57,7 +57,6 @@ are specfic.
 <br />
 <br />
 <br />
-![Uploading image.png…]()
 
 # What can be improved in this project?
 1. User Authentication and Authorization (using hardcoded authentication for now)
